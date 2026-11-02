@@ -75,7 +75,7 @@ fun TaskCounter() {
         horizontalAlignment = Alignment.CenterHorizontally
     ){
         Column(
-            modifier = Modifier //
+            modifier = Modifier
             .fillMaxWidth(),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
