@@ -57,7 +57,7 @@ fun TaskCounter() {
         modifier = Modifier
         .fillMaxWidth()
         .padding(horizontal = 12.dp)
-        .padding(top = 4.dp),
+        .padding(vertical = 12.dp),
         verticalArrangement = Arrangement.spacedBy(8.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ){
@@ -102,7 +102,7 @@ fun TaskCounter() {
         Button(
             onClick = { if (count < maxTasks) count++ },
             modifier = Modifier.fillMaxWidth()
-                .height(48.dp),
+                .height(40.dp),
             shape = RoundedCornerShape(4.dp),
             enabled = count < maxTasks,
             colors = ButtonDefaults.buttonColors(
@@ -114,7 +114,7 @@ fun TaskCounter() {
         Button(
             onClick = { if (count > 0) count-- },
             modifier = Modifier.fillMaxWidth()
-                .height(48.dp),
+                .height(40.dp),
             shape = RoundedCornerShape(4.dp),
             enabled = count > 0,
             colors = ButtonDefaults.buttonColors(
@@ -129,10 +129,10 @@ fun TaskCounter() {
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(48.dp)
+                    .height(40.dp)
                     .clip(RoundedCornerShape(4.dp))
                     .background(Color(0xFFD3F5E0)), // прогресс бар
-                contentAlignment = Alignment.Center // 👈 Центрируем текст внутри Box
+                contentAlignment = Alignment.Center //  Центрируем текст внутри Box
 
             ) {Text("Все задачи выполнены", color = Color(0xFF006400) , fontWeight = FontWeight.Bold)}
         }
@@ -140,7 +140,7 @@ fun TaskCounter() {
         // Кнопка сброса
         Button(onClick = { count = 0 },
             modifier = Modifier.fillMaxWidth()
-                .height(48.dp),
+                .height(40.dp),
             shape = RoundedCornerShape(4.dp),
             colors = ButtonDefaults.buttonColors(
                 containerColor = Color.LightGray,      // Цвет фона кнопки
